@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
         
         // Make an object named "synthesizer" , which is an instance of the
-        let synthesizer = AVspeechsynthesizer()
+        let synthesizer = AVSpeechSynthesizer()
         
         
         //Make a string that contains what we want the computer to say
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
         //Make an object named 'utterence' , which is an instance of the class
         // Avspeechutterence
-        var utterence = AVspeechutterence (string: message)
+        var utterence = AVSpeechUtterance (string: message)
         
         //Speak the Message
         synthesizer.speak (utterence)
