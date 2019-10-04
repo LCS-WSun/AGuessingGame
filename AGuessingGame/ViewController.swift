@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     // MARK: Initializers        // Do any additional setup after loading the view.
     
+    @IBOutlet weak var submittedGuess: UITextField!
     // MARK: Methods (functions)- behaviours
     
     // Runs as soon as the view becomes visible to the user
@@ -36,8 +37,20 @@ class ViewController: UIViewController {
         
         //Speak the Message
         synthesizer.speak (utterence)
+        print("the number to guess is\(targetNumber)")
+        
+        
+        
+        
     }
-    
+    //will be used to check the guess
+    @IBAction func checkGuess(_ sender: Any) {
+        
+        //Obtain the guess value from the text field
+        let guessText = submittedGuess
+        
+        
+    }
     
 }
 
