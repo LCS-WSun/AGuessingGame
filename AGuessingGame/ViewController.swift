@@ -23,17 +23,33 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        speak(message: "I'm thinking of a number between 1 and 100. Guess what it is.")
+        speak(message: "I'm thinking of a number between 1 and 100. Guess what it is")
         print ("I'm thiking of a number between 1 and 100. Guess what it is")
     }
+    
+
     
     
     //will be used to check the guess
     @IBAction func checkGuess(_ sender: Any) {
         
         //Obtain the guess value from the text field
-        let guessText = submittedGuess.text!
-        let guessNumber = Int(guessText)!
+        guard let  guessText = submittedGuess.text , guessText != "" else {
+             speak(message: "Mind entering a value good ole chap?")
+            return
+            
+            
+            
+        }
+        
+        // Try to convert the string into an integer data type
+        guard let guessNumber = Int (guessText) else {
+            speak(message: "I can't read this text, please enter it as a number and thankyou")
+            return
+        
+        }
+    
+        
         
         //For testing purposes. What is the guess
         print("for testing purposes the guess is \(guessNumber)")
