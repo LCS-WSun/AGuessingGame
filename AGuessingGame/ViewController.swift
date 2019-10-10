@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
         
         speak(message: "I'm thinking of a number between 1 and 100. Guess what it is")
-        print ("I'm thiking of a number between 1 and 100. Guess what it is")
+        print ("I'm thinking of a number between 1 and 100. Guess what it is")
     }
     
 
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
         //Obtain the guess value from the text field
         guard let  guessText = submittedGuess.text , guessText != "" else {
-             speak(message: "Mind entering a value good ole chap?")
+             speak(message: "Stop trolling me and enter a value now!")
             return
             
             
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         
         // Try to convert the string into an integer data type
         guard let guessNumber = Int (guessText) else {
-            speak(message: "I can't read this text, please enter it as a number and thankyou")
+            speak(message: "I don't read english, I only read values")
             return
         
         }
@@ -71,9 +71,9 @@ class ViewController: UIViewController {
             
             
         } else {
-            print("You are correct!")
+            print("That took a while but goodjob")
             
-            speak(message: "You are correct!")
+            speak(message: "That took a while but goodjob")
             
 
             
